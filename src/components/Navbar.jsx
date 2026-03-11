@@ -42,18 +42,18 @@ export default function Navbar() {
                         </span>
                     </Link>
 
-                    {/* Desktop Nav */}
-                    <div className="hidden md:flex items-center gap-1">
+                    {/* Desktop Nav - Centered */}
+                    <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-6">
                         {navLinks.map((link) => {
                             const Icon = link.icon;
                             return (
                                 <Link
                                     key={link.to}
                                     to={link.to}
-                                    className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200
-                    ${isActive(link.to)
-                                            ? "bg-primary-50 text-primary-700"
-                                            : "text-surface-500 hover:text-surface-800 hover:bg-surface-100"
+                                    className={`flex items-center gap-2 text-sm font-medium transition-colors duration-200
+                                        ${isActive(link.to)
+                                            ? "text-surface-900"
+                                            : "text-surface-500 hover:text-surface-800"
                                         }`}
                                 >
                                     <Icon size={16} />

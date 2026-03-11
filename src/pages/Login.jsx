@@ -59,10 +59,10 @@ export default function Login() {
                 </div>
 
                 {/* Login Card */}
-                <div className="bg-white rounded-2xl shadow-xl shadow-surface-900/5 border border-surface-200/60 p-8">
-                    <div className="mb-6">
-                        <h2 className="text-xl font-semibold text-surface-800">Welcome back</h2>
-                        <p className="text-sm text-surface-500 mt-1">
+                <div className="bg-white rounded-2xl shadow-xl shadow-surface-900/5 border border-surface-200/50 p-8 sm:p-10">
+                    <div className="mb-8">
+                        <h2 className="text-2xl font-semibold text-surface-900 tracking-tight">Welcome back</h2>
+                        <p className="text-sm text-surface-500 mt-1.5">
                             Sign in to manage your field operations
                         </p>
                     </div>
@@ -93,10 +93,10 @@ export default function Login() {
                                         setAuthError("");
                                     }}
                                     placeholder="you@company.com"
-                                    className={`w-full pl-11 pr-4 py-2.5 rounded-xl border text-sm
+                                    className={`w-full pl-11 pr-4 py-2.5 rounded-lg border text-sm
                     placeholder:text-surface-400 transition-all duration-200
                     focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-400
-                    ${errors.email ? "border-red-300 bg-red-50/50" : "border-surface-300 bg-white hover:border-surface-400"}`}
+                    ${errors.email ? "border-red-300 bg-red-50/50" : "border-surface-200 bg-surface-50 hover:border-surface-300 hover:bg-white"}`}
                                 />
                             </div>
                             {errors.email && (
@@ -121,10 +121,10 @@ export default function Login() {
                                         setAuthError("");
                                     }}
                                     placeholder="Enter your password"
-                                    className={`w-full pl-11 pr-4 py-2.5 rounded-xl border text-sm
+                                    className={`w-full pl-11 pr-4 py-2.5 rounded-lg border text-sm
                     placeholder:text-surface-400 transition-all duration-200
                     focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-400
-                    ${errors.password ? "border-red-300 bg-red-50/50" : "border-surface-300 bg-white hover:border-surface-400"}`}
+                    ${errors.password ? "border-red-300 bg-red-50/50" : "border-surface-200 bg-surface-50 hover:border-surface-300 hover:bg-white"}`}
                                 />
                             </div>
                             {errors.password && (
@@ -137,11 +137,10 @@ export default function Login() {
                             id="login-button"
                             type="submit"
                             disabled={loading}
-                            className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800
-                text-white font-medium py-2.5 px-4 rounded-xl shadow-lg shadow-primary-600/25
-                transition-all duration-200 hover:shadow-xl hover:shadow-primary-600/30
-                disabled:opacity-70 disabled:cursor-not-allowed
-                flex items-center justify-center gap-2 text-sm"
+                            className="w-full bg-surface-900 hover:bg-surface-800 text-white font-medium py-2.5 px-4 rounded-lg
+                                shadow-md shadow-surface-900/10 transition-all duration-200 
+                                disabled:opacity-70 disabled:cursor-not-allowed
+                                flex items-center justify-center gap-2 text-sm"
                         >
                             {loading ? (
                                 <>
