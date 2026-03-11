@@ -37,20 +37,15 @@ export default function Login() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-surface-50 via-primary-50/30 to-surface-100 flex items-center justify-center p-4">
-            {/* Background decoration */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-200/20 rounded-full blur-3xl" />
-                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-300/15 rounded-full blur-3xl" />
-            </div>
+        <div className="min-h-screen bg-[#FAFAFA] flex items-center justify-center p-4">
 
             <div className="w-full max-w-md relative">
-                {/* Logo Card */}
+
                 <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl shadow-lg shadow-primary-500/25 mb-4">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-surface-900 rounded-xl shadow-sm mb-4">
                         <HardHat size={28} className="text-white" />
                     </div>
-                    <h1 className="text-2xl font-bold text-surface-800 tracking-tight">
+                    <h1 className="text-2xl font-semibold text-surface-900 tracking-tight">
                         FieldSync
                     </h1>
                     <p className="text-surface-500 text-sm mt-1">
@@ -58,8 +53,8 @@ export default function Login() {
                     </p>
                 </div>
 
-                {/* Login Card */}
-                <div className="bg-white rounded-2xl shadow-xl shadow-surface-900/5 border border-surface-200/50 p-8 sm:p-10">
+
+                <div className="bg-white rounded-2xl border border-surface-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-8 sm:p-10">
                     <div className="mb-8">
                         <h2 className="text-2xl font-semibold text-surface-900 tracking-tight">Welcome back</h2>
                         <p className="text-sm text-surface-500 mt-1.5">
@@ -68,7 +63,7 @@ export default function Login() {
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-5" id="login-form">
-                        {/* Auth Error */}
+
                         {authError && (
                             <div className="bg-red-50 border border-red-200 text-red-600 rounded-xl px-4 py-3 text-sm flex items-center gap-2">
                                 <div className="w-1.5 h-1.5 bg-red-500 rounded-full flex-shrink-0" />
@@ -76,7 +71,7 @@ export default function Login() {
                             </div>
                         )}
 
-                        {/* Email */}
+
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-surface-700 mb-1.5">
                                 Email address
@@ -94,9 +89,9 @@ export default function Login() {
                                     }}
                                     placeholder="you@company.com"
                                     className={`w-full pl-11 pr-4 py-2.5 rounded-lg border text-sm
-                    placeholder:text-surface-400 transition-all duration-200
-                    focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-400
-                    ${errors.email ? "border-red-300 bg-red-50/50" : "border-surface-200 bg-surface-50 hover:border-surface-300 hover:bg-white"}`}
+                                        placeholder:text-surface-400 transition-colors duration-200
+                                        focus:outline-none focus:ring-1 focus:ring-surface-900 focus:border-surface-900 shadow-sm
+                                        ${errors.email ? "border-red-300 bg-red-50/50" : "border-surface-200 bg-white hover:border-surface-300"}`}
                                 />
                             </div>
                             {errors.email && (
@@ -104,7 +99,7 @@ export default function Login() {
                             )}
                         </div>
 
-                        {/* Password */}
+
                         <div>
                             <label htmlFor="password" className="block text-sm font-medium text-surface-700 mb-1.5">
                                 Password
@@ -122,9 +117,9 @@ export default function Login() {
                                     }}
                                     placeholder="Enter your password"
                                     className={`w-full pl-11 pr-4 py-2.5 rounded-lg border text-sm
-                    placeholder:text-surface-400 transition-all duration-200
-                    focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-400
-                    ${errors.password ? "border-red-300 bg-red-50/50" : "border-surface-200 bg-surface-50 hover:border-surface-300 hover:bg-white"}`}
+                                        placeholder:text-surface-400 transition-colors duration-200
+                                        focus:outline-none focus:ring-1 focus:ring-surface-900 focus:border-surface-900 shadow-sm
+                                        ${errors.password ? "border-red-300 bg-red-50/50" : "border-surface-200 bg-white hover:border-surface-300"}`}
                                 />
                             </div>
                             {errors.password && (
@@ -132,13 +127,13 @@ export default function Login() {
                             )}
                         </div>
 
-                        {/* Submit */}
+
                         <button
                             id="login-button"
                             type="submit"
                             disabled={loading}
-                            className="w-full bg-surface-900 hover:bg-surface-800 text-white font-medium py-2.5 px-4 rounded-lg
-                                shadow-md shadow-surface-900/10 transition-all duration-200 
+                            className="w-full bg-surface-900 hover:bg-black text-white font-medium py-2.5 px-4 rounded-lg
+                                shadow-sm transition-colors duration-200 
                                 disabled:opacity-70 disabled:cursor-not-allowed
                                 flex items-center justify-center gap-2 text-sm"
                         >
@@ -156,7 +151,7 @@ export default function Login() {
                         </button>
                     </form>
 
-                    {/* Demo hint */}
+
                     <div className="mt-6 pt-5 border-t border-surface-100">
                         <p className="text-xs text-surface-400 text-center">
                             Demo credentials:{" "}

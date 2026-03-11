@@ -1,16 +1,16 @@
 const statusStyles = {
     Active:
-        "bg-emerald-50 text-emerald-700 border border-emerald-200",
+        "bg-surface-50 text-surface-900 border border-surface-200",
     Pending:
-        "bg-amber-50 text-amber-700 border border-amber-200",
+        "bg-surface-50 text-surface-700 border border-surface-200",
     Completed:
-        "bg-slate-100 text-slate-600 border border-slate-200",
+        "bg-surface-50 text-surface-500 border border-surface-200",
 };
 
 const dotStyles = {
-    Active: "bg-emerald-500",
+    Active: "bg-surface-900",
     Pending: "bg-amber-500",
-    Completed: "bg-slate-400",
+    Completed: "bg-surface-300",
 };
 
 export default function StatusBadge({ status }) {

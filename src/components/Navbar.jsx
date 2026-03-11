@@ -29,15 +29,15 @@ export default function Navbar() {
     const isActive = (path) => location.pathname.startsWith(path);
 
     return (
-        <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-surface-200">
+        <nav className="sticky top-0 z-50 bg-white border-b border-surface-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link to="/projects" className="flex items-center gap-2.5">
-                        <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-                            <HardHat size={18} className="text-white" />
+                        <div className="w-8 h-8 bg-surface-900 rounded-lg flex items-center justify-center shadow-sm">
+                            <HardHat size={16} className="text-white" />
                         </div>
-                        <span className="text-lg font-bold text-surface-800 tracking-tight">
+                        <span className="text-base font-semibold text-surface-900 tracking-tight">
                             FieldSync
                         </span>
                     </Link>
@@ -69,7 +69,7 @@ export default function Navbar() {
                             <p className="text-sm font-medium text-surface-700">{user?.name}</p>
                             <p className="text-xs text-surface-400">{user?.role}</p>
                         </div>
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-xs font-semibold">
+                        <div className="w-8 h-8 rounded-full bg-surface-100 border border-surface-200 flex items-center justify-center text-surface-700 text-xs font-semibold">
                             {user?.name?.charAt(0)}
                         </div>
                         <button
@@ -93,7 +93,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {mobileOpen && (
-                <div className="md:hidden border-t border-surface-200 bg-white/95 backdrop-blur-xl">
+                <div className="md:hidden border-t border-surface-200 bg-white">
                     <div className="px-4 py-3 space-y-1">
                         {navLinks.map((link) => {
                             const Icon = link.icon;
@@ -115,7 +115,7 @@ export default function Navbar() {
                         })}
                         <div className="pt-2 mt-2 border-t border-surface-100">
                             <div className="flex items-center gap-3 px-3 py-2 mb-2">
-                                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-xs font-semibold">
+                                <div className="w-8 h-8 rounded-full bg-surface-100 border border-surface-200 flex items-center justify-center text-surface-700 text-xs font-semibold">
                                     {user?.name?.charAt(0)}
                                 </div>
                                 <div>

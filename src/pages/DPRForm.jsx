@@ -96,7 +96,7 @@ export default function DPRForm() {
         }`;
 
     return (
-        <div className="min-h-screen bg-surface-50">
+        <div className="min-h-screen bg-[#FAFAFA]">
             <Navbar />
 
             <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -114,7 +114,7 @@ export default function DPRForm() {
                             <ClipboardList size={18} className="text-primary-600" />
                         </div>
                         <div>
-                            <h1 className="text-2xl font-bold text-surface-800 tracking-tight">
+                            <h1 className="text-3xl font-semibold text-surface-900 tracking-tight">
                                 Daily Progress Report
                             </h1>
                             <p className="text-sm text-surface-500">
@@ -127,7 +127,7 @@ export default function DPRForm() {
                 </div>
 
                 {/* Form Card */}
-                <div className="bg-white rounded-2xl shadow-xl shadow-surface-900/5 border border-surface-200/60 p-6 sm:p-8">
+                <div className="bg-white rounded-xl shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05),0_1px_4px_-1px_rgba(0,0,0,0.02)] border border-surface-200 p-6 sm:p-8">
                     <form onSubmit={handleSubmit} className="space-y-6" id="dpr-form">
                         {/* Project */}
                         <div>
@@ -256,8 +256,8 @@ export default function DPRForm() {
                                 <button
                                     type="button"
                                     onClick={() => navigate("/projects")}
-                                    className="px-5 py-2.5 rounded-xl border border-surface-300 text-sm font-medium text-surface-600
-                    hover:bg-surface-50 hover:border-surface-400 transition-all duration-200"
+                                    className="px-5 py-2.5 rounded-lg border border-surface-200 text-sm font-medium text-surface-600
+                    hover:bg-surface-50 hover:text-surface-900 transition-colors duration-200"
                                 >
                                     Cancel
                                 </button>
@@ -265,11 +265,10 @@ export default function DPRForm() {
                                     id="submit-dpr"
                                     type="submit"
                                     disabled={loading}
-                                    className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800
-                    text-white font-medium py-2.5 px-6 rounded-xl shadow-lg shadow-primary-600/25
-                    transition-all duration-200 hover:shadow-xl hover:shadow-primary-600/30
-                    disabled:opacity-70 disabled:cursor-not-allowed
-                    flex items-center justify-center gap-2 text-sm"
+                                    className="bg-surface-900 hover:bg-black text-white font-medium py-2.5 px-6 rounded-lg
+                                        shadow-sm transition-colors duration-200 
+                                        disabled:opacity-70 disabled:cursor-not-allowed
+                                        flex items-center justify-center gap-2 text-sm"
                                 >
                                     {loading ? (
                                         <>

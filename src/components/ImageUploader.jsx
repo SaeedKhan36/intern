@@ -42,20 +42,23 @@ export default function ImageUploader({ images, setImages, error }) {
             {images.length < 3 && (
                 <div
                     onClick={() => fileInputRef.current?.click()}
-                    className="border-2 border-dashed border-surface-300 rounded-xl p-6 text-center
-            cursor-pointer hover:border-primary-400 hover:bg-primary-50/50
+                    className="border-2 border-dashed border-surface-300 bg-surface-50 rounded-xl p-8 text-center
+            cursor-pointer hover:border-surface-400 hover:bg-surface-100
             transition-all duration-200 group"
                 >
-                    <div className="flex flex-col items-center gap-2">
-                        <div className="w-10 h-10 rounded-full bg-surface-100 group-hover:bg-primary-100 flex items-center justify-center transition-colors">
-                            <ImagePlus size={20} className="text-surface-400 group-hover:text-primary-500 transition-colors" />
+                    <div className="flex flex-col items-center gap-3">
+                        <div className="w-12 h-12 rounded-full bg-white shadow-sm border border-surface-200 flex items-center justify-center transition-all group-hover:scale-105 group-hover:shadow-md">
+                            <Upload size={22} className="text-surface-500 group-hover:text-surface-700 transition-colors" />
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-surface-600 group-hover:text-primary-600 transition-colors">
+                            <p className="text-sm font-medium text-surface-700 group-hover:text-surface-900 transition-colors">
                                 Click to upload photos
                             </p>
-                            <p className="text-xs text-surface-400 mt-0.5">
-                                PNG, JPG or WEBP • {3 - images.length} remaining
+                            <p className="text-xs text-surface-500 mt-1">
+                                PNG, JPG or WEBP • drag and drop supported
+                            </p>
+                            <p className="text-[11px] font-medium text-primary-600 mt-2 bg-primary-50 px-2 py-0.5 rounded-full inline-block">
+                                {3 - images.length} remaining
                             </p>
                         </div>
                     </div>
